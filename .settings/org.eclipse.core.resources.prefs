@@ -1,0 +1,16 @@
+eclipse.preferences.version=1
+encoding//config/common/common-dev.properties=UTF-8
+encoding//config/common/common-prod.properties=UTF-8
+encoding//config/common/common-test.properties=UTF-8
+encoding//config/gateway/gateway-dev.properties=UTF-8
+encoding//config/gateway/gateway-prod.properties=UTF-8
+encoding//config/gateway/gateway-test.properties=UTF-8
+encoding//config/gateway/gateway.properties=UTF-8
+encoding//config/query-server/query-server-dev.properties=UTF-8
+encoding//config/query-server/query-server-prod.properties=UTF-8
+encoding//config/query-server/query-server-test.properties=UTF-8
+encoding//config/query-server/query-server.properties=UTF-8
+encoding//config/web/web-dev.properties=UTF-8
+encoding//config/web/web-prod.properties=UTF-8
+encoding//config/web/web-test.properties=UTF-8
+encoding//config/web/web.properties=UTF-8
