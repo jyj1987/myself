@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: product
+  jpa:
+    database: mysql
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://192.168.137.103:3306/springcloud?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+#server:
+#  port: 9101
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8001/eureka/
