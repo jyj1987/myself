@@ -9,18 +9,4 @@ spring:
     username: root
     password: 123456
     url: jdbc:mysql://192.168.137.103:3306/springcloud?useSSL=false&characterEncoding=utf-8
-  cloud:
-    stream:
-      bindings:
-        output:
-          destination: order-demo
-          group: order
-          content-type: application/json
-        input:
-          destination: order-demo
-        orderInput:
-          destination: order-my
-        orderOutput:
-          destination: order-my
-          group: order-my
-          content-type: application/json
+  
