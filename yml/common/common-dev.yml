@@ -4,6 +4,25 @@ spring:
     port: 5672
     username: guest
     password: guest
+feign:
+  hystrix:
+    enabled: true
+  compression:
+      request:
+        mime-types: text/xml,application/xml,application/xml
+        min-request-size: 2048
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 3000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+feign:
+
 management:
   endpoints:
     web:
