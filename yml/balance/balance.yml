@@ -1,6 +1,6 @@
 spring:
   application:
-    name: order
+    name: balance
   jpa:
     database: mysql
     show-sql: true
@@ -13,17 +13,11 @@ spring:
     stream:
       bindings:
         output:
-          destination: order-default
-          group: order
+          destination: balance-default
+          group: balance
           content-type: application/json
         input:
-          destination: order-default
-        orderInput:
-          destination: order-my
-        orderOutput:
-          destination: order-my
-          group: order-my
-          content-type: application/json
+          destination: balance-default
   redis:
     host: 192.168.137.100
     port: 6379
