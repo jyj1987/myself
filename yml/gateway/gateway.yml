@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: gateway
+zuul:
+  routes:
+    MyOrder:
+      path: /order/**
+      serviceId: order
+      #本服务忽略的报文头
+      sensitiveHeaders:
+    MyUserCenter:
+      path: /uc/**
+      serviceId: usercenter
+    MyPay:
+      path: /pay/**
+      serviceId: pay
+    MyBalance:
+      path: /balance/**
+      serviceId: balance
+    MyManager:
+      path: /manager/**
+      serviceId: manager
+  #正则的方式过滤掉某些地址
+  ignored-patterns:
+  #全局忽略的敏感头
+  sensitive-headers:
