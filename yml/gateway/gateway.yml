@@ -3,7 +3,7 @@ spring:
     name: gateway
 zuul:
   routes:
-  ignored-services: *
+  ignored-services: "*"
     MyOrder:
       path: /order/**
       serviceId: order
