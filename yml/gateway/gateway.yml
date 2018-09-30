@@ -33,6 +33,8 @@ zuul:
 
 server:
   paths:
+    usercenter: #serverId
+      loginNoPass: /login/nopass      #serverCode及对应的实际path
     order: #serverId
       ordertest: /test/str      #serverCode及对应的实际path
       orderconfig: /test/testConfig
