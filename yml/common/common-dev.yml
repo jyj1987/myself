@@ -12,8 +12,8 @@ feign:
         mime-types: text/xml,application/xml,application/xml
         min-request-size: 2048
 ribbon:
-  ReadTimeout: 10000
-  ConnectTimeout: 3000
+  ReadTimeout: 6000
+  ConnectTimeout: 1000
 hystrix:
   command:
     default:
