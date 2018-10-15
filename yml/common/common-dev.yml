@@ -11,16 +11,16 @@ feign:
       request:
         mime-types: text/xml,application/xml,application/xml
         min-request-size: 2048
-#ribbon:
-#  ReadTimeout: 6000
-#  ConnectTimeout: 1000
-#hystrix:
-#  command:
-#    default:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 15000   #大于等于 (ribbon.ReadTimeout+ribbon.ConnectTimeout)*2
+ribbon:
+  ReadTimeout: 600000
+  ConnectTimeout: 1000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1300000   #大于等于 (ribbon.ReadTimeout+ribbon.ConnectTimeout)*2
 management:
   endpoints:
     web:
