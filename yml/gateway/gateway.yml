@@ -1,23 +1,6 @@
 spring:
   application:
     name: gateway
-zuul:
-  ignored-services:
-    "*"
-  routes:
-    global:
-      path: /timert/**
-      serviceId: usercenter #此处配置服务ID无效，会被filter自动重定向
-    usercenter-swagger:
-      path: usercenter/*
-      order-swagger:
-        path: order/*
-      pay-swagger:
-        path: pay/*
-      balance-swagger:
-        path: balance/*
-      manager-swagger:
-        path: manager/*
 swagger:
   config:
     enable: true
@@ -27,6 +10,23 @@ swagger:
     - {name: 支付服务, path: /pay/v2/api-docs,version: 0.0.1 }
     - {name: 结算服务, path: /balance/v2/api-docs,version: 0.0.1 }
     - {name: 管理平台, path: /manager/v2/api-docs,version: 0.0.1 }
+zuul:
+#  ignored-services:
+#    "*"
+  routes:
+    global:
+      path: /timert/**
+      serviceId: usercenter #此处配置服务ID无效，会被filter自动重定向
+    usercenter-swagger:
+      path: usercenter/*
+    order-swagger:
+      path: order/*
+    pay-swagger:
+      path: pay/*
+    balance-swagger:
+      path: balance/*
+    manager-swagger:
+      path: manager/*
 #    MyOrder:
 #      path: /order/**
 #      serviceId: order
