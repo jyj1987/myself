@@ -3,7 +3,7 @@ spring:
     host: 39.104.87.147
     port: 5672
     username: admin
-    password: 123456
+    password: Szkj123!@#
 feign:
   hystrix:
     enabled: true
