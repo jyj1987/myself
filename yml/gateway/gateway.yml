@@ -5,18 +5,17 @@ swagger:
   config:
     enable: true
     sourceList:
-    - {name: 用户中心, path: /usercenter/v2/api-docs,version: 0.0.1 }
-    - {name: 订单服务, path: /order/v2/api-docs,version: 0.0.1 }
-    - {name: 支付服务, path: /pay/v2/api-docs,version: 0.0.1 }
-    - {name: 结算服务, path: /balance/v2/api-docs,version: 0.0.1 }
-    - {name: 管理平台, path: /manager/v2/api-docs,version: 0.0.1 }
+    - {name: 用户中心, path: /usercenter/v2/api-docs,version: 1.0.0 }
+    - {name: 订单服务, path: /order/v2/api-docs,version: 1.0.0 }
+    - {name: 支付服务, path: /pay/v2/api-docs,version: 1.0.0 }
+    - {name: 结算服务, path: /balance/v2/api-docs,version: 1.0.0 }
+    - {name: 管理平台, path: /manager/v2/api-docs,version: 1.0.0 }
 zuul:
 #  ignored-services:
 #    "*"
   routes:
     global:
       path: /timert/**
-      serviceId: usercenter #此处配置服务ID无效，会被filter自动重定向
     usercenter-swagger:
       path: usercenter/*
     order-swagger:
