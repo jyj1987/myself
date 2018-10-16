@@ -18,6 +18,7 @@ zuul:
       path: /timert/**
     usercenter-swagger:
       path: usercenter/*
+      serverId: usercenter
     order-swagger:
       path: order/*
     pay-swagger:
