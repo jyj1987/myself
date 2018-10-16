@@ -8,6 +8,25 @@ zuul:
     global:
       path: /timert/**
       serviceId: usercenter #此处配置服务ID无效，会被filter自动重定向
+    usercenter-swagger:
+      path: usercenter/*
+      order-swagger:
+        path: order/*
+      pay-swagger:
+        path: pay/*
+      balance-swagger:
+        path: balance/*
+      manager-swagger:
+        path: manager/*
+swagger:
+  config:
+    enable: true
+    sourceList:
+    - {name: 用户中心, path: /usercenter/v2/api-docs,version: 0.0.1 }
+    - {name: 订单服务, path: /order/v2/api-docs,version: 0.0.1 }
+    - {name: 支付服务, path: /pay/v2/api-docs,version: 0.0.1 }
+    - {name: 结算服务, path: /balance/v2/api-docs,version: 0.0.1 }
+    - {name: 管理平台, path: /manager/v2/api-docs,version: 0.0.1 }
 #    MyOrder:
 #      path: /order/**
 #      serviceId: order
@@ -29,15 +48,3 @@ zuul:
   ignored-patterns:
   #全局忽略的敏感头
   sensitive-headers:
-
-
-server:
-  paths:
-    usercenter: #serverId
-      loginNoPass: /login/nopass      #serverCode及对应的实际path
-    order: #serverId
-      ordertest: /test/str      #serverCode及对应的实际path
-      orderconfig: /test/testConfig
-    pay:
-      paytest: /test/str
-      payback: /test/fallback
