@@ -1,50 +1,49 @@
 spring:
   application:
     name: gateway
-swagger:
-  config:
-    enable: true
-    sourceList:
-    - {name: 用户中心, path: /usercenter/v2/api-docs,version: 1.0.0 }
-    - {name: 订单服务, path: /order/v2/api-docs,version: 1.0.0 }
-    - {name: 支付服务, path: /pay/v2/api-docs,version: 1.0.0 }
-    - {name: 结算服务, path: /balance/v2/api-docs,version: 1.0.0 }
-    - {name: 管理平台, path: /manager/v2/api-docs,version: 1.0.0 }
-zuul:
-  ignored-services:
-    "*"
-  routes:
-    global:
-      path: /timert/**
-    usercenter-swagger:
-      path: usercenter/**
-      serverId: usercenter
-    order-swagger:
-      path: order/**
-    pay-swagger:
-      path: pay/**
-    balance-swagger:
-      path: balance/**
-    manager-swagger:
-      path: manager/**
-#    MyOrder:
-#      path: /order/**
-#      serviceId: order
-#      #本服务忽略的报文头
-#      sensitiveHeaders:
-#    MyUserCenter:
-#      path: /uc/**
-#      serviceId: usercenter
-#    MyPay:
-#      path: /pay/**
-#      serviceId: pay
-#    MyBalance:
-#      path: /balance/**
-#      serviceId: balance
-#    MyManager:
-#      path: /manager/**
-#      serviceId: manager
-  #正则的方式过滤掉某些地址
-  ignored-patterns:
-  #全局忽略的敏感头
-  sensitive-headers:
+#swagger:
+#  config:
+#    enable: true
+#    sourceList:
+#    - {name: 用户中心, path: /usercenter/v2/api-docs,version: 1.0.0 }
+#    - {name: 订单服务, path: /order/v2/api-docs,version: 1.0.0 }
+#    - {name: 支付服务, path: /pay/v2/api-docs,version: 1.0.0 }
+#    - {name: 结算服务, path: /balance/v2/api-docs,version: 1.0.0 }
+#    - {name: 管理平台, path: /manager/v2/api-docs,version: 1.0.0 }
+#zuul:
+##  ignored-services:
+##    "*"
+#  routes:
+#    global:
+#      path: /timert/**
+#    usercenter-swagger:
+#      path: usercenter/**
+#    order-swagger:
+#      path: order/**
+#    pay-swagger:
+#      path: pay/**
+#    balance-swagger:
+#      path: balance/**
+#    manager-swagger:
+#      path: manager/**
+##    MyOrder:
+##      path: /order/**
+##      serviceId: order
+##      #本服务忽略的报文头
+##      sensitiveHeaders:
+##    MyUserCenter:
+##      path: /uc/**
+##      serviceId: usercenter
+##    MyPay:
+##      path: /pay/**
+##      serviceId: pay
+##    MyBalance:
+##      path: /balance/**
+##      serviceId: balance
+##    MyManager:
+##      path: /manager/**
+##      serviceId: manager
+#  #正则的方式过滤掉某些地址
+#  ignored-patterns:
+#  #全局忽略的敏感头
+#  sensitive-headers:
