@@ -11,8 +11,8 @@ swagger:
     - {name: 结算服务, path: /balance/v2/api-docs,version: 1.0.0 }
     - {name: 管理平台, path: /manager/v2/api-docs,version: 1.0.0 }
 zuul:
-#  ignored-services:
-#    "*"
+  ignored-services:
+    "*"
   routes:
     global:
       path: /timert/**
