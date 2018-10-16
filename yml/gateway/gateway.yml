@@ -17,16 +17,16 @@ zuul:
     global:
       path: /timert/**
     usercenter-swagger:
-      path: usercenter/*
+      path: usercenter/**
       serverId: usercenter
     order-swagger:
-      path: order/*
+      path: order/**
     pay-swagger:
-      path: pay/*
+      path: pay/**
     balance-swagger:
-      path: balance/*
+      path: balance/**
     manager-swagger:
-      path: manager/*
+      path: manager/**
 #    MyOrder:
 #      path: /order/**
 #      serviceId: order
