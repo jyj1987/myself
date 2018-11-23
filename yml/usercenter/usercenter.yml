@@ -1,17 +1,3 @@
 spring:
   application:
     name: usercenter
-  cloud:
-    stream:
-      bindings:
-        output:
-          destination: usercenter-default
-          group: usercenter
-          content-type: application/json
-        input:
-          destination: usercenter-default
-  redis:
-    host: 192.168.137.100
-    port: 6379
-    timeout: 3000
-    password:

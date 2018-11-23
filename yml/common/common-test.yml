@@ -1,9 +1,26 @@
 spring:
   rabbitmq:
-    host: 192.168.137.100
+    host: 39.104.87.147
     port: 5672
-    username: guest
-    password: guest
+    username: admin
+    password: Szkj123!@#
+feign:
+  hystrix:
+    enabled: true
+  compression:
+    request:
+      mime-types: text/xml,application/xml,application/xml
+      min-request-size: 2048
+ribbon:
+  ReadTimeout: 600000
+  ConnectTimeout: 1000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 1300000   #大于等于 (ribbon.ReadTimeout+ribbon.ConnectTimeout)*2
 management:
   endpoints:
     web:
