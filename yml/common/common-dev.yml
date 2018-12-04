@@ -26,7 +26,7 @@ management:
     web:
       exposure:
         include: bus-refresh
-eureka:
-  client:
-    healthcheck:
-      enabled: true
+#eureka:
+#  client:
+#    healthcheck:
+#      enabled: true
