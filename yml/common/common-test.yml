@@ -25,6 +25,9 @@ spring:
     port: 5672
     username: admin
     password: Szkj123!@#
+    listener:
+      simple:
+        acknowledge-mode: manual
 feign:
   hystrix:
     enabled: true
